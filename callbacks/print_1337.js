@@ -17,9 +17,9 @@ var leetObj = {
 };
 
 function print1337 (html) {
-  html = html.replace(/a|e|l|s|t/gi, function(matched){
-    return leetObj[matched];
-  });
+  // html = html.replace(/a|e|l|s|t/gi|[ck]|[er]|[you]/gi, function(matched){
+  //   return leetObj[matched];
+  // });
   console.log(html.replace(/[a]/g, "4").replace(/[e]/g, "3").replace(/[o]/g, "0").replace(/[l]/g, "1"));
 }
 
