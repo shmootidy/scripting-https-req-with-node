@@ -1,7 +1,18 @@
 var https = require('https');
 
 function getAndPrintHTML (options) {
-  https.get(options, )
+  https.get(options, function(response){
+    response.setEncoding('utf8');
+
+    var dataReceived = '';
+    response.on('data', function(data){
+      dataReceived += data;
+    });
+
+    response.on('end', function(){
+      console.log(dataReceived);
+    });
+  });
 }
 
 var requestOptions = {
