@@ -14,3 +14,6 @@ var requestOptions = {
 };
 
 getHTML(requestOptions, printHTML);
+
+// considerations:
+// - A function definition is when you define the function, give it parameters and tasks (like looping through an array, printing stuff, whatever). A function invocation is when you call that function to make it go.
