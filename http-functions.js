@@ -1,7 +1,7 @@
 var https = require('https');
 
 module.exports = function getHTML (options, callback) {
-   https.get(options, function(response){
+  https.get(options, function(response){
 
     if(response.statusCode !== 200){
       console.log("Whoops!");
@@ -17,9 +17,11 @@ module.exports = function getHTML (options, callback) {
 
     response.on('end', function(){
       callback(receivedHTML);
-    })
-  })
-};
+    });
+  });
+}
+
+
 
 //considerations:
 // - My immediate impulse is to have the require('https') variable within the http-function.js file. This allows it to be private (which is always nice; keep your hands off my stuff!) but...
